@@ -1,0 +1,97 @@
+/* Grunnstil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    position: relative;
+}
+
+/* Bakgrunnsbilde med mørk overlay */
+body {
+    background: url('background.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 48, 87, 0.85); /* NAV blå med transparens */
+    z-index: 0;
+}
+
+/* Header / navigasjon */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav a {
+    margin-left: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+/* Hero-innhold */
+main {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+main h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* Knapp */
+.cta-button {
+    background-color: #FF9100; /* NAV oransje */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e67e00;
+}
