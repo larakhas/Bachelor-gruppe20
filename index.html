@@ -3,33 +3,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <title>URL-shortener</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="main.css" rel="stylesheet" />
 </head>
+
 <body id="page-top">
 <nav id="mainNav">
-    <div class="container">
-        <a class="brand" href="#page-top">URL-shortener</a>
-        <button class="menu-toggle" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i> Menu
-        </button>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Project Members</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+    <a class="brand" href="#page-top">
+        <img src="logo.svg" alt="Logo" class="logo" />
+    </a>
+    <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Project members</a></li>
+    </ul>
 </nav>
 
 <header class="masthead">
     <div class="container">
         <div class="intro">
             <h1>URL-shortener</h1>
-            <h2>Skriver inn noe her.</h2>
+            <h2 class="intro-text">
+            This bachelor's thesis, in collaboration with nav, deals with the development of an internal URL shortening
+                service for secure and efficient link sharing. The solution is built with Kotlin and React,
+                integrated into nav's Test Nais platform,
+                and allows users to manage links with a focus on security and GDPR compliance.</h2>
             <a class="btn-primary" href="#about">Read more</a>
         </div>
     </div>
@@ -37,124 +38,80 @@
 
 <section class="about-section" id="about">
     <div class="container">
-        <h2>About</h2>
-        <p>
-            skrive noe her
-        </p>
-        <p>
-            Read more:
-        </p>
+        <h2 class="title">About</h2>
+        <h3 class="undertitle">Documents</h3>
 
-        <h2>Final Report/Sluttrapport</h2>
-        <p><a href="https://s333933.github.io/GaleaGames/Galea-Games-Finansspill-Sluttrapport.pdf">Sluttrapport (Norwegian)</a></p>
+        <div class="documents-container">
+            <div class="document">
+                <h3 class="rapport">Status report/Statusrapport</h3>
+                <a href="./documents/statusrapport.pdf" target="_blank" name="document">
+                    <img src="pdf.svg" alt="Statusrapport.pdf link" width="200">
+                </a>
+            </div>
 
-        <h2>Attachments/Vedlegg</h2>
-        <p><a href="</a></p>
+            <div class="document">
+                <h3 class="rapport">Project draft/Prosjektskisse</h3>
+                <a href="./documents/prosjektskisse.pdf" target="_blank" name="document">
+                    <img src="pdf.svg" alt="Prosjektskisse.pdf link" width="200">
+                </a>
+            </div>
 
-        <h2>Project Draft/Prosjektskisse</h2>
-        <p><a href="</a></p>
+            <div class="document">
+                <h3 class="rapport">Pre-report/Forprosjekt</h3>
+                <a href="./documents/forprosjekt.pdf" target="_blank" name="document">
+                    <img src="pdf.svg" alt="Forprosjektrapport.pdf link" width="200">
+                </a>
+            </div>
 
-        <h2>Pre-Report/Forprosjekt</h2>
-        <p><a href=</a></p>
+            <div class="document">
+                <h3 class="rapport">Final report/Sluttrapport</h3>
+                <a href="./documents/sluttrapport.pdf" target="_blank" name="document">
+                    <img src="pdf.svg" alt="Sluttrapport.pdf link" width="200">
+                </a>
+            </div>
+        </div>
+        <section id="projects" class="project-members">
+            <h2 class="project-title">Project members</h2>
+            <p class="group">Group 20</p>
+            <div class="project-members-container">
+                <div class="member">
+                    <img src="person.svg" alt="ikon" class="member-icon" />
+                    <h3>Kathrine Hassanieh</h3>
+                    <p>Majoring in Information Technology</p>
+                </div>
+                <div class="member">
+                    <img src="person.svg" alt="ikon" class="member-icon" />
+                    <h3>Sigurd Ivar Volden Omnes</h3>
+                    <p>Majoring in Computer Engineering</p>
+                </div>
+                <div class="member">
+                    <img src="person.svg" alt="ikon" class="member-icon" />
+                    <h3>Mahnoor Kamran Sadiq</h3>
+                    <p>Majoring in Computer Engineering</p>
+                </div>
+                <div class="member">
+                    <img src="person.svg" alt="ikon" class="member-icon" />
+                    <h3>Lara Hassanieh</h3>
+                    <p>Majoring in Computer Engineering</p>
+                </div>
+            </div>
+        </section>
 
-        <img class=" alt="iPad Preview" />
+
+
+
+
+
     </div>
 </section>
+<script>
+    function toggleMenu() {
+        document.getElementById('navLinks').classList.toggle('active');
+    }
+</script>
 
 
-
-
-<!-- More content and member sections here -->
-
-<style>
-    body {
-        font-family: 'Nunito', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #003453;
-        color: #fff;
-    }
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    nav {
-        background: #111;
-        padding: 1rem;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-    }
-    nav .brand {
-        font-size: 1.5rem;
-        color: #fff;
-        text-decoration: none;
-    }
-    .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: #fff;
-    }
-    .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-    }
-    .nav-links a {
-        color: #fff;
-        text-decoration: none;
-    }
-    .masthead {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .btn-primary {
-        background: black;
-        color: #fff;
-        padding: 0.5rem 1rem;
-        border: none;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-    .about-section {
-        padding: 4rem 0;
-        text-align: center;
-        background: #111;
-    }
-    .responsive-img {
-        max-width: 100%;
-        height: auto;
-    }
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-    }
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    @media (max-width: 768px) {
-        .nav-links {
-            display: none;
-            flex-direction: column;
-        }
-        .menu-toggle {
-            display: inline-block;
-        }
-    }
-</style>
 </body>
 </html>
+
 
